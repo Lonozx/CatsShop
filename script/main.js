@@ -65,6 +65,7 @@ const pets = [
   let description = document.querySelector('.description');
   let city = document.querySelector('.city');
   
+  //Хотів ще зробити додавання нових карток, але не дійшло діло
   function addCat(name, img, price, description, location){
    
   }
@@ -79,6 +80,7 @@ const pets = [
                    item.location);
   })
   
+  //Секція появи та зникнення форми для нових карток
   function reach(){
     formed.style.display = "flex";
   formed.style.visibility = "visible";
@@ -93,9 +95,9 @@ const pets = [
   remove.addEventListener('click', removeAd);
   addCart.addEventListener('click', reach);
   
-  // addCart.addEventListener('click', reachBack);
+  addCart.addEventListener('click', reachBack);
   
-  //Намагався зробити рендер по своєму С:
+  //Намагався зробити рендер опшн по своєму С:
   function setOption(){
      const uniqueNames = Array.from(new Set(pets.map((item)=>item.name)));
     let optionCall = document.createElement('option');
@@ -171,6 +173,7 @@ const pets = [
   //Пошук по породі
   btnS.addEventListener('click', funS);
   
+  //Рендер опшн функцією
   // function optionHolder(){
   //   const uniqueNames = Array.from(new Set(pets.map((item)=>item.name)));
   //   let optionCall = document.createElement('option');
